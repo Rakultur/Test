@@ -1,0 +1,434 @@
+/* Css General portafolio */
+
+/* General */
+
+:root {
+    /* Paleta de colores */
+
+    /* Fondos */
+    --fondo-body: #EEEEEE;
+    --navbar: #5050db;
+
+    /* Titulos */
+    --titulo: #5050db;
+    --subtitulos: #686D76;
+
+    /* Textos */
+    --Parrafos: #181C14;
+
+    /* Colores */
+    --color-rojo: #D21312;
+    --color-azul: #4F709C;
+    --color-verde: #44f0b7;
+    --color-amarillo: #EAC100;
+    --color-blanco: #FAF8F1;
+    --color-negro: #0F0F0F;
+    --color-morado: #810CA8;
+    --color-naranja: #FF4C29;
+    --color-cafe: #E5BA73;
+
+    /* Card */
+    --color-card: #181C14;
+
+    /* Fondo hero*/
+    --fondo: url(../asset/images/claro.jpg);
+    --color-hero-div: #EEEEEE;
+
+}
+
+/* Body */
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: var(--Parrafosbody);
+    background-color: var(--fondo-body);
+    padding: 0;
+    margin: 0;
+}
+
+/* Column */
+
+.flex-column {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+.flex-column div {
+    padding: 5px;
+}
+
+/* Row */
+
+.flex-row {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.flex-row div {
+    padding: 10px;
+}
+
+/* Nav */
+
+nav {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    justify-content: space-between;
+    background-color: var(--navbar);
+}
+
+nav div {
+    align-content: center;
+    margin: 10px;
+    padding: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    margin: 8px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: var(--color-azul);
+    color: var(--color-blanco);
+}
+
+nav a:hover {
+    background-color: var(--color-amarillo);
+    color: var(--color-negro);
+}
+
+nav img {
+    width: 200px;
+    height: 50px;
+}
+
+/* Hero */
+
+.hero {
+    display: flex;
+    flex-flow: column wrap;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero div {
+    background-color: var(--color-hero-div);
+    border-radius: 10px;
+}
+
+.bg_principal {
+    background-image: var(--fondo);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Cards */
+
+.card {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 250px;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 30px;
+    background-color: var(--color-card);
+    color: var(--color-black);
+    transition: 0.8s;
+}
+
+.card:hover {
+    box-shadow: 0 8px 10px 0 #000000cb;
+    scale: 1.1;
+}
+
+.card img {
+    height: 80px;
+    width: 80px;
+}
+
+.titulo-card {
+    font-size: 35px;
+    color: var(--color-negro);
+}
+
+.card ul {
+    height: 80px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.logos {
+    background-color: var(--color-negro);
+    border-radius: 20%;
+    padding: 10px;
+}
+
+/* Logo */
+
+.logo-cliente {
+    width: 350px;
+    height: 100px;
+}
+
+.logo-hero {
+    width: 80px;
+    height: 80px;
+    filter: brightness(1.1);
+    mix-blend-mode: multiply;
+}
+
+
+/* Botones */
+
+.btn_img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+}
+
+/* Listas */
+
+.lista {
+    list-style: none;
+    text-align: start;
+}
+
+/* Footer */
+
+footer {
+    height: 400px;
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--color-blanco);
+}
+
+footer div {
+    padding: 15px;
+}
+
+footer address {
+    font-size: 4vh;
+    color: var(--color-negro);
+}
+
+footer ul {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    list-style: none;
+}
+
+footer ul li {
+    margin: 15px;
+}
+
+footer img {
+    margin: 15px;
+    width: 80px;
+    height: 80px;
+}
+
+/* Switch */
+
+.switch {
+    position: relative;
+    display: block;
+    width: 62px;
+    height: 38px;
+    align-items: center;
+    justify-content: center;
+}
+
+.switch input {
+    opacity: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-rojo);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 28px;
+    width: 28px;
+    left: 5px;
+    bottom: 5px;
+    background-color: var(--color-blanco);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: var(--color-amarillo);
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px var(--color-amarillo);
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 50px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* Estilos */
+
+.titulo-1 {
+    font-size: 10vh;
+    color: var(--titulo);
+}
+
+.titulo-2 {
+    font-size: 5vh;
+    color: var(--subtitulos);
+}
+
+.titulo-3 {
+    font-size: 4vh;
+    color: var(--subtitulos);
+}
+
+.titulo-4 {
+    font-size: 3vh;
+    color: var(--subtitulos);
+}
+
+.titulo-5 {
+    font-size: 2vh;
+    color: var(--subtitulos);
+}
+
+.p-5 {
+    padding: 50px;
+}
+
+.p-10 {
+    padding: 100px;
+}
+
+.m-5 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.m-10 {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.bg-azul {
+    background-color: var(--color-azul);
+}
+
+.bg-negro {
+    background-color: var(--color-negro);
+}
+
+.bg-verde {
+    background-color: var(--color-verde);
+}
+
+.bg-blanco {
+    background-color: var(--color-blanco);
+}
+
+.bg-amarillo {
+    background-color: var(--color-amarillo);
+}
+
+.bg-naranja {
+    background-color: var(--color-naranja);
+}
+
+.bg-cafe {
+    background-color: var(--color-cafe);
+}
+
+.bg-morado {
+    background-color: var(--color-morado);
+}
+
+.text-blanco {
+    color: var(--color-blanco);
+}
+
+.text-negro {
+    color: var(--color-negro);
+}
+
+.text-rojo {
+    color: var(--color-rojo);
+}
+
+.text-amarillo {
+    color: var(--color-amarillo);
+}
+
+.text-morado {
+    color: var(--color-morado);
+}
+
+/* Mantenimiento */
+
+.mantenimiento {
+    background-image: url(/asset/index/bg_index.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.mantenimiento div {
+    background-color: var(--color-blanco);
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.mantenimiento div img {
+    width: 150px;
+    height: 50px;
+}
