@@ -6,12 +6,15 @@
     /* Paleta de colores */
 
     /* Fondos */
-    --fondo-body: #EEEEEE;
-    --navbar: #5050db;
+    --fondo-body: #F9F7F7;
+    --navbar: #3F72AF;
+    --navbar-link: #3F72AF;
+    --navbar-link-hover: #DBE2EF;
+    --footer: #112D4E;
 
     /* Titulos */
-    --titulo: #5050db;
-    --subtitulos: #686D76;
+    --titulo: #3F72AF;
+    --subtitulos: #DBE2EF;
 
     /* Textos */
     --Parrafos: #181C14;
@@ -29,11 +32,6 @@
 
     /* Card */
     --color-card: #181C14;
-
-    /* Fondo hero*/
-    --fondo: url(../asset/images/claro.jpg);
-    --color-hero-div: #EEEEEE;
-
 }
 
 /* Body */
@@ -46,6 +44,14 @@ body {
     margin: 0;
 }
 
+/* Parrafos */
+
+p {
+    color: var(--Parrafos);
+    font-size: 4vh;
+    width: 60vw;
+}
+
 /* Column */
 
 .flex-column {
@@ -54,6 +60,7 @@ body {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
@@ -100,18 +107,19 @@ nav a {
     margin: 8px;
     padding: 5px;
     border-radius: 5px;
-    background-color: var(--color-azul);
+    background-color: var(--navbar-link);
     color: var(--color-blanco);
 }
 
 nav a:hover {
-    background-color: var(--color-amarillo);
+    background-color: var(--navbar-link-hover);
     color: var(--color-negro);
 }
 
 nav img {
     width: 200px;
     height: 50px;
+    border-radius: 20px;
 }
 
 /* Hero */
@@ -125,7 +133,6 @@ nav img {
 }
 
 .hero div {
-    background-color: var(--color-hero-div);
     border-radius: 10px;
 }
 
@@ -134,6 +141,9 @@ nav img {
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+/* Slider */
+
 
 /* Cards */
 
@@ -219,16 +229,16 @@ footer {
     align-content: center;
     align-items: center;
     justify-content: space-evenly;
-    background-color: var(--color-blanco);
+    background-color: var(--footer);
 }
 
 footer div {
     padding: 15px;
+    color: var(--color-blanco);
 }
 
 footer address {
     font-size: 4vh;
-    color: var(--color-negro);
 }
 
 footer ul {
@@ -273,6 +283,11 @@ footer img {
 .titulo-5 {
     font-size: 2vh;
     color: var(--subtitulos);
+}
+
+.img-fondo {
+    filter: brightness(1.1);
+    mix-blend-mode: multiply;
 }
 
 .p-5 {
